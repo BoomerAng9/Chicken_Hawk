@@ -1,0 +1,33 @@
+{
+  "node": "chicken-hawk",
+  "role": "gateway",
+  "network": "boomerang9-ecosystem",
+  "version": "1.0.0",
+  "description": "API gateway and reverse proxy — routes all external traffic across the ecosystem",
+  "provides": [
+    { "name": "gateway", "path": "gateway/", "description": "Reverse proxy and API gateway" },
+    { "name": "rate-limiting", "path": "config/", "description": "Rate limiting and throttle config" },
+    { "name": "auth-proxy", "path": "gateway/", "description": "JWT validation and auth forwarding" },
+    { "name": "service-routing", "path": "config/", "description": "Service discovery and routing rules" }
+  ],
+  "consumes": [
+    { "node": "aims", "capability": "api-backend", "endpoint": "aims:8080" },
+    { "node": "agent-acheevy-009", "capability": "agent-api", "endpoint": "agent-acheevy-009:8000" },
+    { "node": "grammar", "capability": "chat-api", "endpoint": "grammar:3003" },
+    { "node": "destinations-ai", "capability": "api", "endpoint": "destinations-ai:3001" },
+    { "node": "estatemind-ai", "capability": "api", "endpoint": "estatemind-ai:3002" }
+  ],
+  "connections": {
+    "aims": { "type": "proxies", "purpose": "Forward /api/aims/* to AIMS backend" },
+    "agent-acheevy-009": { "type": "proxies", "purpose": "Forward /api/agent/* to Agent-009" },
+    "grammar": { "type": "proxies", "purpose": "Forward /api/chat/* to GRAMMAR" },
+    "destinations-ai": { "type": "proxies", "purpose": "Forward /api/destinations/* to Destinations AI" },
+    "estatemind-ai": { "type": "proxies", "purpose": "Forward /api/estate/* to EstateMind AI" },
+    "myclaw": { "type": "orchestrated-by", "purpose": "Launched via myclaw docker-compose" }
+  },
+  "file_index": {
+    "entrypoints": ["gateway/", "docker-compose.yml"],
+    "config": [".env.example", "config/"],
+    "scripts": ["scripts/"]
+  }
+}
