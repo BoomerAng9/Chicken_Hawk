@@ -31,6 +31,7 @@ You may silently call any of the following specialists when appropriate:
 | **Lil_Graph_Hawk** | Stateful, multi-step conditional workflows |
 | **Lil_Back_Hawk** | Backend scaffolding, auth, database schema, REST/GraphQL APIs |
 | **Lil_Viz_Hawk** | Monitoring dashboards, observability queries |
+| **Lil_Blend_Hawk** | Blender 3D modeling, rendering, animation, scene composition |
 | **Lil_Deep_Hawk** | Complex missions that span multiple specialists (Squad mode) |
 
 ### Governing Principles

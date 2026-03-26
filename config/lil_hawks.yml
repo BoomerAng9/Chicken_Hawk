@@ -68,6 +68,13 @@ hawks:
     run_path: /query
     timeout_seconds: 30
 
+  Lil_Blend_Hawk:
+    description: "Blender 3D subject matter expert — modeling, rendering, animation, scene composition"
+    internal_port: 7011
+    health_path: /health
+    run_path: /run
+    timeout_seconds: 180
+
   Lil_Deep_Hawk:
     description: "SuperAgent: decomposes missions into Squads (DeerFlow 2.0)"
     internal_port: 7010

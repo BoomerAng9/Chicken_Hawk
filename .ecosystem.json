@@ -34,8 +34,8 @@
     "stack": ["next.js-14", "react-three-fiber", "three.js", "zustand", "tailwindcss"],
     "port": 3000,
     "features": [
-      "10 Lil_Hawks animated agent avatars",
-      "12 themed rooms (desk, gym, lab, deploy-bay, review, flow, sandbox, memory-vault, graph, deep-ops, lounge, gateway)",
+      "11 Lil_Hawks animated agent avatars",
+      "13 themed rooms (desk, gym, lab, deploy-bay, review, flow, sandbox, memory-vault, graph, deep-ops, lounge, gateway, blend-studio)",
       "Real-time activity feed",
       "VPS topology visualization (VPS-1 Gateway + VPS-2 Fleet + Tailscale)",
       "Governance chain HUD (User > ACHEEVY > Boomer_Ang > Chicken Hawk > Squad > Lil_Hawks)",
@@ -54,6 +54,7 @@
       { "name": "Lil_Graph_Hawk", "backend": "LangGraph", "role": "Stateful Workflows" },
       { "name": "Lil_Back_Hawk", "backend": "InsForge", "role": "LLM-Native Backends" },
       { "name": "Lil_Viz_Hawk", "backend": "SimStudio", "role": "Visual Monitoring" },
+      { "name": "Lil_Blend_Hawk", "backend": "Blender 3D", "role": "3D Modeling & Rendering SME" },
       { "name": "Lil_Deep_Hawk", "backend": "DeerFlow 2.0", "role": "SuperAgent with Squads" }
     ],
     "rooms": {
@@ -68,7 +69,8 @@
       "graph-room": "Graph Workshop",
       "deep-ops": "Deep Ops Center",
       "lounge": "Hawk Lounge",
-      "gateway": "Gateway Hub"
+      "gateway": "Gateway Hub",
+      "blend-studio": "Blend Studio"
     }
   },
   "file_index": {
