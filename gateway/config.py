@@ -48,6 +48,7 @@ class Settings(BaseSettings):
     graph_hawk_url: str = Field(..., description="Lil_Graph_Hawk base URL")
     back_hawk_url: str = Field(..., description="Lil_Back_Hawk base URL")
     viz_hawk_url: str = Field(..., description="Lil_Viz_Hawk base URL")
+    blend_hawk_url: str = Field("http://localhost:7011", description="Lil_Blend_Hawk base URL")
     deep_hawk_url: str = Field(..., description="Lil_Deep_Hawk base URL")
 
     # Observability
@@ -73,6 +74,7 @@ class Settings(BaseSettings):
             "Lil_Graph_Hawk": self.graph_hawk_url,
             "Lil_Back_Hawk": self.back_hawk_url,
             "Lil_Viz_Hawk": self.viz_hawk_url,
+            "Lil_Blend_Hawk": self.blend_hawk_url,
             "Lil_Deep_Hawk": self.deep_hawk_url,
         }
 

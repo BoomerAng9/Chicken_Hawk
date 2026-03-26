@@ -36,6 +36,7 @@ class HawkRole(str, Enum):
     BACK = "Lil_Back_Hawk"
     VIZ = "Lil_Viz_Hawk"
     DEEP = "Lil_Deep_Hawk"
+    BLEND = "Lil_Blend_Hawk"
 
 
 @dataclass
@@ -74,6 +75,7 @@ Specialists:
 - Lil_Graph_Hawk  : stateful multi-step conditional workflows
 - Lil_Back_Hawk   : backend scaffolding, auth, database schema, APIs
 - Lil_Viz_Hawk    : monitoring, observability, dashboard queries
+- Lil_Blend_Hawk  : Blender 3D modeling, rendering, animation, scene composition
 - Lil_Deep_Hawk   : complex missions spanning multiple specialists
 
 Respond ONLY with valid JSON matching this schema:
